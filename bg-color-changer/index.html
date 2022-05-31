@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg color</title>
+    <style>
+        :root {
+            --btn-border: rgb(159, 176, 227);
+            --btn-bg: rgb(69, 211, 230);
+            --bg: rgb(179, 59, 59);
+            --text-color:rgb(90,58,200);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background: var(--bg);
+            overflow: hidden;
+        }
+
+        #btn {
+            color: var(--text-color);
+            padding: 6px 10px;
+            background-color: var(--btn-bg);
+            border: 1px solid var(--btn-border);
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">Click</button>
+    <script>
+        let root = document.documentElement;
+        const btn = document.querySelector("#btn");
+        function random() {
+            return Math.floor(Math.random() * 255);
+        }
+        btn.addEventListener("click", () => {
+            root.style.setProperty('--btn-border', 'rgb(' + random() + ',' + random() + ',' + random() + ')');
+            root.style.setProperty('--btn-bg', 'rgb(' + random() + ',' + random() + ',' + random() + ')');
+            root.style.setProperty('--bg', 'rgb(' + random() + ',' + random() + ',' + random() + ')');
+            root.style.setProperty('--text-color', 'rgb(' + random() + ',' + random() + ',' + random() + ')');
+        })
+
+    </script>
+</body>
+
+</html>
