@@ -88,9 +88,6 @@ body {
     margin: 30% auto;
     max-width: 90%;
 }
-.ttl.hidden{
-    display: none;
-}
 
 .description-container{
     display: flex;
@@ -99,6 +96,12 @@ body {
     flex-direction: column;
     margin: 2rem 0;
     position: relative;
+}
+#description-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .img-container{
     width: 90%;
@@ -121,6 +124,7 @@ h2.ttl{
     color: var(--dark-gray);
     text-align: center;
 }
+
 .portfolio-container{
     width: 100%;
     display: flex;
@@ -130,8 +134,9 @@ h2.ttl{
 }
 .portfolio-items{
     position: relative;
+    aspect-ratio: 16/10;
     height: 150px;
-    width: 90%;
+    width: clamp(330px, 400px, 450px);
 }
 .portfolio-items>h3{
     color: var(--white);
@@ -142,7 +147,6 @@ h2.ttl{
     font-weight: lighter;
     bottom: 1rem;
     left: 2rem;
-
 }
 #deep-earth{
     background-image: url("./images/mobile/image-deep-earth.jpg");
@@ -195,13 +199,18 @@ h2.ttl{
     background-repeat: no-repeat;
     background-position: center;
 }
-#more{
+
+#moreTop{
+    display: none;
+}
+#moreBottop{
     border: 1px solid var(--black);
     margin: 1cm auto;
     width: fit-content;
     padding: .5rem 1cm;
     cursor: pointer;
 }
+
 
 
 .footer{
@@ -236,7 +245,7 @@ h2.ttl{
     color: var(--dark-gray);
 }
 
-.main.hidden , .footer.hidden , .nav-bar.hidden{
+.main.hidden , .footer.hidden , .nav-bar.hidden, .ttl.hidden{
     display: none;
 }
 
@@ -267,14 +276,182 @@ h2.ttl{
         text-align: left;
         font-family: var(--josefin-sans);
         font-weight: lighter;
-        font-size: 75px;
+        max-width: 50%;
+        font-size: 5rem;
         border: 3px solid var(--white);
         padding: 1rem 3rem;
         margin: 0;
         position: relative;
         left: 10%;
         top: 20%;
-        max-width: 45%;
+        max-width: 50%;
     }
+    .description-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+        flex-direction: row;
+        padding: 50px 100px;
+        margin: 2rem auto;
+        position: relative;
+
+        width: fit-content;
+    }
+    .img-container{
+        aspect-ratio: 16/9;
+    }
+    #description-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h2.ttl{
+        color: var(--black);
+        text-transform: uppercase;
+        font-family: var(--josefin-sans);
+        font-weight: lighter;
+        font-size: xx-large;
+        margin: 0;
+        text-align: left;
+        width: auto;
+        left: 0;
+        top: 0;
+        max-width: 500px;
+    }
+    #description-wrapper>.description{
+        text-align: left;
+    }
+    #portfolio-ttl-wrapper{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .portfolio-container{
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px;
+        gap: 2rem;
+    }
+    .portfolio{
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .portfolio-items{
+        aspect-ratio: 9/16;
+        position: relative;
+        height: clamp(350px,400px, 450px);
+        width: auto;
+    }
+    .portfolio-items>h3{
+        color: var(--white);
+        position: absolute;
+        font-family: var(--josefin-sans);
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: lighter;
+        bottom: 1rem;
+        left: 1rem;
+    }
+    #deep-earth{
+        background-image: url("./images/desktop/image-deep-earth.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #night-arcade{
+        background-image: url("./images/desktop/image-night-arcade.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #soccer-vr{
+        background-image: url("./images/desktop/image-soccer-team.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #the-grid{
+        background-image: url("./images/desktop/image-grid.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #from-above-vr{
+        background-image: url("./images/desktop/image-from-above.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #pocket-borealis{
+        background-image: url("./images/desktop/image-pocket-borealis.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #the-curiosity{
+        background-image: url("./images/desktop/image-curiosity.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #fish-eye{
+        background-image: url("./images/desktop/image-fisheye.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #moreTop{
+        display: block;
+        border: 1px solid var(--black);
+        height: fit-content;
+        width: fit-content;
+        padding: .5rem 1cm;
+        cursor: pointer;
+    }
+    #moreBottop{
+        display: none;
+    }
+    .portfolio{
+        padding: 50px;
+    }
+    .footer-wrapper{
+        flex-direction: row;
+    }
+    .footer-image{
+        justify-self: start;
+    }
+    .fw{
+        justify-self: end;
+    }
+    .fi{
+
+        justify-self: start;
+    }
+    .cp{
+
+        justify-self: end;
+    }
+    .footer{
+        display: grid;
+        grid-column-gap: 50%;
+        grid-template-columns: 50px;
+        grid-template-rows: 50px;
+        grid-template-areas:
+                "header header"
+                "footer footer";
+    }
+    .fw>.li-item{
+        padding-bottom: 5px;
+    }
+    .li-item:hover{
+        box-shadow: 0 2px 0px;
+        transition: ease-in-out .3s;
+
+    }
+
 }
 
