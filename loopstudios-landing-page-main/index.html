@@ -9,47 +9,91 @@
     <title>Frontend Mentor | Loopstudios landing page</title>
 </head>
 <body>
-<div class="top">
-    <div class="nav-logo active">
-        <a href="./images"><img src="./images/logo.svg" alt="Home"></a>
+<nav class="top">
+    <div class="nav-logo ">
+        <nav class="toggle-container">
+            <a href="./images">
+                <img src="./images/logo.svg" alt="Home">
+            </a>
+            <div id="tgl-btn"></div>
+        </nav>
         <ul class="nav-bar">
-            <li class="nav-item"> About</li>
-            <li class="nav-item">Careers</li>
-            <li class="nav-item">Events</li>
-            <li class="nav-item">Products</li>
-            <li class="nav-item">Support</li>
+            <li class="li-item">About</li>
+            <li class="li-item">Careers</li>
+            <li class="li-item">Events</li>
+            <li class="li-item">Products</li>
+            <li class="li-item">Support</li>
         </ul>
     </div>
     <h1 class="ttl">Immersive experiences that deliver</h1>
+</nav>
+<div class="main">
+    <div class="description-container">
+        <div class="img-container">
+            <img src="./images/mobile/image-interactive.jpg" alt="Interactive" id="interactive-vr">
+        </div>
+        <h2 class="ttl"> The leader in interactive VR</h2>
+        <p class="description">
+            Founded in 2011, Loopstudios has been producing world-class virtual reality
+            projects for some of the best companies around the globe. Our award-winning
+            creations have transformed businesses through digital experiences that bind
+            to their brand.
+        </p>
+    </div>
+    <div class="portfolio">
+        <h2 class="ttl">
+            Our creations
+        </h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-items" id="deep-earth">
+                <h3>Deep earth</h3>
+            </div>
+            <div class="portfolio-items" id="night-arcade">
+                <h3>Night arcade</h3>
+            </div>
+            <div class="portfolio-items" id="soccer-vr">
+                <h3>Soccer team VR</h3>
+            </div>
+            <div class="portfolio-items" id="the-grid">
+                <h3>The grid</h3>
+            </div>
+            <div class="portfolio-items" id="from-above-vr">
+                <h3>From up above VR</h3>
+            </div>
+            <div class="portfolio-items" id="pocket-borealis">
+                <h3>Pocket borealis</h3>
+            </div>
+            <div class="portfolio-items" id="the-curiosity">
+                <h3>The curiosity</h3>
+            </div>
+            <div class="portfolio-items" id="fish-eye">
+                <h3>Make it fisheye</h3>
+            </div>
+        </div>
+        <div id="more">S E E &nbsp;&nbsp;A L L</div>
+    </div>
 </div>
-The leader in interactive VR
+<div class="footer">
+    <a href="./images"><img src="./images/logo.svg" alt="Home"></a>
+    <div class="footer-wrapper">
+        <div class="li-item">About</div>
+        <div class="li-item">Careers</div>
+        <div class="li-item">Events</div>
+        <div class="li-item">Products</div>
+        <div class="li-item">Support</div>
+    </div>
+    <div class="footer-icons">
+        <a href=""><img src="./images/icon-facebook.svg" alt="Facebook"></a>
+        <a href=""><img src="./images/icon-twitter.svg" alt="Twitter"></a>
+        <a href=""><img src="./images/icon-pinterest.svg" alt="Pinterest"></a>
+        <a href=""><img src="./images/icon-instagram.svg" alt="Instagram"></a>
+    </div>
 
-Founded in 2011, Loopstudios has been producing world-class virtual reality
-projects for some of the best companies around the globe. Our award-winning
-creations have transformed businesses through digital experiences that bind
-to their brand.
-
-Our creations
-
-See all
-
-Deep earth
-Night arcade
-Soccer team VR
-The grid
-From up above VR
-Pocket borealis
-The curiosity
-Make it fisheye
-
-About
-Careers
-Events
-Products
-Support
-
-© 2021 Loopstudios. All rights reserved.
-
-
+    <p class="copyright">
+        © 2021 Loopstudios. All rights reserved.
+    </p>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
