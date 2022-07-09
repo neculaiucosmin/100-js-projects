@@ -25,6 +25,9 @@ body {
 .top {
     height: 100vh;
     background-image: url("./images/mobile/image-hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .nav-logo {
@@ -59,7 +62,6 @@ body {
 }
 .nav-logo.active {
     margin: 0;
-    position: absolute;
     overflow: hidden;
     background-color: var(--black);
     height: 100vh;
@@ -85,6 +87,9 @@ body {
     padding: 1rem;
     margin: 30% auto;
     max-width: 90%;
+}
+.ttl.hidden{
+    display: none;
 }
 
 .description-container{
@@ -231,7 +236,45 @@ h2.ttl{
     color: var(--dark-gray);
 }
 
-.main.hidden , .footer.hidden , nav-bar.hidden{
+.main.hidden , .footer.hidden , .nav-bar.hidden{
     display: none;
 }
-/**/
+
+@media only screen and (min-width: 900px) {
+    .top{
+        background-image: url("./images/desktop/image-hero.jpg");
+
+    }
+    #tgl-btn{
+        display: none;
+    }
+    .nav-logo{
+        display: flex;
+        justify-content: space-between;
+        padding: 1cm 10%;
+    }
+    .nav-bar{
+        display: flex;
+        gap: 1rem;
+    }
+    .li-item{
+        text-transform: none;
+        font-size: 1.25rem;
+    }
+    .ttl{
+        color: var(--white);
+        text-transform: uppercase;
+        text-align: left;
+        font-family: var(--josefin-sans);
+        font-weight: lighter;
+        font-size: 75px;
+        border: 3px solid var(--white);
+        padding: 1rem 3rem;
+        margin: 0;
+        position: relative;
+        left: 10%;
+        top: 20%;
+        max-width: 45%;
+    }
+}
+
