@@ -5,7 +5,7 @@ const app = express()
 app.set('view engine', 'ejs')
 
 app.use('/articles', articleRouter)
-
+app.use("/dist", express.static("dist"))
 app.get('/' , (req, res)=>{
     const articles = [{
         title: "Test Article",
@@ -17,7 +17,8 @@ app.get('/' , (req, res)=>{
         createdAt: new Date,
         description:"Test Description"
     }]
-    res.render('articles/index', {articles:articles})
+    res.render('index', {articles:articles})
 })
+
 
 app.listen(5000)
