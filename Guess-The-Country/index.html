@@ -11,7 +11,7 @@
         <a href="index.html">Guess</a>
     </div>
     <div class="user-stats-container">
-        <div class="score"></div>
+        <div class="score"><span id="correctAns">0</span><span>/10</span></div>
         <div class="profile">
             <img src="./img/avatar.jpg" alt="Profile" height="50" width="50">
         </div>
@@ -20,6 +20,20 @@
 <div class="container">
     <div class="img-wrapper">
         <img src="" alt="Flag"  id="flag">
+        <div class="ans">
+            <div class="ans-option">
+                <div class="ansText">
+                    Correct
+                </div>
+                <img src="./img/check.png" alt="Correct answer" height="50px">
+            </div>
+            <div class="ans-option">
+                <div class="ansText">
+                    Wrong
+                </div>
+                <img src="./img/wrong.png" alt="Wrong answer" height="50px">
+            </div>
+        </div>
     </div>
     <div class="ans-container">
         <div class="ans-wrapper" id="a1">Text</div>
