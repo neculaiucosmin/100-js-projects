@@ -12,11 +12,55 @@
     --tea-gree:#CFE0C3;
     --font:'Amatic SC', cursive;
 }
+/*Style for body↓*/
 body{
     height: 100vh;
     width: 100vw;
     overflow-x: clip;
     background-color: var(--green);
+}
+
+/*styles for main menu  ↓*/
+
+.menu{
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font);
+    justify-content: center;
+    gap: 2.25rem;
+
+}
+.menu-logo{
+
+}
+.play-btn{
+    border: 2px solid var(--dark-blue);
+    border-radius: .25rem;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+#plat-txt{
+    font-size: xx-large;
+}
+.contact{
+    display: flex;
+    gap: 1rem;
+}
+.manu-img{
+    width: 50px;
+    height: 50px;
+}
+
+
+/*styles for the main component ↓*/
+.playing{
+    display: none;
 }
 .nav-bar{
     display: flex;
@@ -68,7 +112,6 @@ body{
     color: antiquewhite;
     border-radius: 5px;
 }
-
 .img-wrapper{
     position: relative;
     aspect-ratio: 16/9;
