@@ -1,5 +1,5 @@
 const urlEu = "https://restcountries.com/v2/regionalbloc/eu";
-let json,arr
+let json, arr
 
 async function getCountries() {
     const response = await fetch(urlEu);
@@ -51,11 +51,14 @@ document.querySelectorAll(".ans-wrapper").forEach(item => {
                 questionNumber++;
                 updateQuestion();
             }
+            else
+                finish()
         } else {
             if (questionNumber < 10) {
                 questionNumber++;
                 updateQuestion();
-            }
+            }else
+                finish();
         }
         score.innerText = counter;
     });
@@ -76,11 +79,21 @@ function setCorrectAns(currentNum) {
 function updateQuestion() {
     //console.log(arr[questionNumber])
     console.log(questionNumber);
-    setCorrectAns(arr[questionNumber])
+    setCorrectAns(arr[questionNumber]);
 }
 
-function startGame(){
-    
+const mainMenu = document.querySelector(".menu");
+const game = document.querySelector(".playing");
+const platBtn = document.querySelector(".play-btn");
+platBtn.addEventListener("click", () => {
+    mainMenu.classList.add("hide");
+    game.classList.remove("hide");
+})
+
+
+const finishDiv = document.querySelector(".finish");
+
+function finish() {
+    game.classList.add("hide");
+    finishDiv.classList.remove("hide");
 }
-
-
