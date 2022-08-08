@@ -1,5 +1,5 @@
 const urlEu = "https://restcountries.com/v2/regionalbloc/eu";
-let json, arr
+let json, arr;
 
 async function getCountries() {
     const response = await fetch(urlEu);
@@ -23,7 +23,6 @@ const pickB = document.getElementById("a2");
 const pickC = document.getElementById("a3");
 const pickD = document.getElementById("a4");
 const score = document.getElementById("correctAns");
-
 
 function random(inp) {
     let num;
@@ -90,10 +89,29 @@ platBtn.addEventListener("click", () => {
     game.classList.remove("hide");
 })
 
-
 const finishDiv = document.querySelector(".finish");
 
 function finish() {
     game.classList.add("hide");
     finishDiv.classList.remove("hide");
+    const finalScore=document.querySelector(".final-score");
+    finalScore.textContent=`Your score is: ${counter}`;
 }
+
+const playAgain=document.querySelector(".restart-btn");
+playAgain.addEventListener("click", ()=>{
+    const finish=document.querySelector(".finish");
+
+    reset();
+    score.innerText=counter;
+    arr=generateArray();
+    finish.classList.add("hide");
+    game.classList.remove("hide");
+
+})
+
+function reset(){
+    questionNumber=0;
+    counter=0;
+}
+
